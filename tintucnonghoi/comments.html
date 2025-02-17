@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bình luận</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .comment-box {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #e9e9e9;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            width: 150px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Các bình luận</h2>
+        <div id="commentList"></div>
+        <a href="index.html" class="back-link">Quay lại</a>
+    </div>
+
+    <script>
+        function loadComments() {
+            let comments = JSON.parse(localStorage.getItem("comments")) || [];
+            let commentList = document.getElementById("commentList");
+
+            if (comments.length === 0) {
+                commentList.innerHTML = "<p>Chưa có bình luận nào.</p>";
+            } else {
+                comments.forEach(comment => {
+                    let div = document.createElement("div");
+                    div.classList.add("comment-box");
+                    div.textContent = comment;
+                    commentList.appendChild(div);
+                });
+            }
+        }
+
+        window.onload = loadComments;
+    </script>
+</body>
+</html>
