@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Báo Công Nghệ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +22,25 @@
             padding: 15px;
             text-align: center;
         }
+	h1 {
+  	    font-family: "Dancing Script", serif;
+  	    font-optical-sizing: auto;
+  	    font-weight: <weight>;
+  	    font-style: normal;
+	}
+	h2 {
+	    font-family: "Open Sans", serif;
+	    font-optical-sizing: auto;
+	    font-weight: <weight>;
+	    font-style: normal;
+	    font-variation-settings: "wdth" 100;
+	}
+	p {
+  	    font-family: "Oswald", serif;
+  	    font-optical-sizing: auto;
+  	    font-weight: <weight>;
+  	    font-style: normal;
+	}
         .container {
             width: 80%;
             margin: auto;
@@ -124,8 +148,8 @@
     <a href="cong_nghe_luong_tu_11251.html" class="container highlight">
         <img src=quantum_computing.jpg alt="Quantum Technology">
         <div class="highlight-content">
-            <h3>Tiêu điểm ngày:</h3>
-            <h2>Công nghệ lượng tử thay đổi thế giới</h2>
+            <h2><strong><u>Tiêu điểm ngày:</u></strong>
+            Công nghệ lượng tử thay đổi thế giới</h2>
             <p><strong>Tác giả:</strong> Vô danh</p>
             <p>Công nghệ lượng tử đang mở ra những thay đổi đột phá trong nhiều lĩnh vực, từ máy tính, bảo mật thông tin đến y tế và truyền thông. Dưới đây là một số ứng dụng nổi bật:</p>
         </div>
@@ -164,7 +188,7 @@
     </div>
     
     <div class="container comment-section">
-    <h3>Để lại bình luận</h3>
+    <h2>Để lại bình luận</h2>
     <textarea id="commentInput" placeholder="Viết bình luận của bạn..."></textarea>
     <button onclick="saveComment()">Gửi</button>
     <p><a href="comments.html">Xem tất cả bình luận</a></p>
